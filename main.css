@@ -17,14 +17,14 @@ a {
 
 #video {
     position: relative;
+    background: rgb(35, 35, 35);
     /* top: 50%; */
     width: var(--pagewidth);
-    /* height: calc(var(--videoratio) * var(--pagewidth)); */
 }
 
 #videocrop {
     width: var(--pagewidth);
-    height: calc(var(--videoratio) * var(--pagewidth));
+    /* height: calc(var(--videoratio) * var(--pagewidth)); */
     overflow: hidden;
 }
 
@@ -75,10 +75,11 @@ a {
     position: fixed;
     top: calc(0.5 * var(--videoratio) * var(--pagewidth));
     left: 50%;
-    width: calc(2 * var(--height));
+    width: var(--pagewidth);
     margin-top: calc(-1 * var(--height));
-    margin-left: calc(-1 * var(--height));
+    margin-left: calc(-0.5 * var(--pagewidth));
     font-size: calc(0.8 * var(--height));
+    text-align: center;
     background: none;
     color: white;
 }
