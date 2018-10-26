@@ -3,14 +3,15 @@
         $('.title').hide()
         $('#choices').hide()
         $('#video').attr('autoplay')
-        $('#video').attr('src', 'long.mp4')
+        $('#video').attr('src', 'videos/long.mp4')
         var video = $('#video')[0]
+        var once = false
         setInterval(function() {
-            // if(video[0].readyState >= 3 && !once) {
-            //     once = true;
-            //     $('#video').attr('style', 'margin-top: ' + ($('#videocrop').height() - $('#video').height()) / 2);
-            //     // $('#prog').attr('style', 'margin-top: ' + $('#video').height() / 2);
-            // }
+            if(video[0].readyState >= 3 && !once) {
+                once = true
+                $('#video').attr('style', 'margin-top: ' + ($('#videocrop').height() - $('#video').height()) / 2)
+                // $('#prog').attr('style', 'margin-top: ' + $('#video').height() / 2);
+            }
             if(video.currentTime > 2 && $('.title').is(':hidden')) {
                 $('.title').fadeIn(2000)
             }
