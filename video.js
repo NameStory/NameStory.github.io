@@ -49,7 +49,6 @@
             data = struct.substring(idx).split('\n')[0].split(' ')
             videolist = data[1].split(',')
             $('#video').attr('src', videolist[0])
-            $('#video')[0].stop()
             $('#choices tr').html('')
             for(let choice of data.slice(2)) {
                 $('#choices tr').append('<td><a href="javascript:;" id="' + choice + '"><div class="choice">' + choice + '</div></a></td>')
