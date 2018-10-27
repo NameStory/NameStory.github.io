@@ -1,5 +1,10 @@
 
     $(function() {
+        var struct = $.ajax({url:'/struct.txt',async:false}).responseText
+        line1end = struct.search('\n')
+        var current = struct.slice(0, line1end)
+        struct = struct.slice(line1end + 1)
+
         var once = false
         var CBARheight
         var video = $('#video')[0]
@@ -40,7 +45,7 @@
             idx = struct.search('#' + title)
             if(idx > 0 && struct[idx - 1] == '+') {$('.title').text(title)}
             else {$('.title').text('')}
-            data = struct.substring(idx).split('\n')[0].split(' ')
+            data = struct.substring(idx).split('\n')[0].split('\t')
             videolist = data[1].split(',')
             $('#video').attr('src', videolist[0])
             $('#choices tr').html('')
