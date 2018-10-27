@@ -1,0 +1,3 @@
++#黑洞	videos/Blackhole.mp4	点击开始 >
+#点击开始 >	videos/Blackhole.mp4	一节点	二节点	三节点	四节点
+#一节点	videos/Blackhole.mp4,videos/long.mp4	结束
