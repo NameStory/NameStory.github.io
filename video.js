@@ -1,6 +1,6 @@
 
     $(function() {
-        var struct = $.ajax({url:'/struct.txt',async:false}).responseText
+        var struct = $.ajax({url:'https://namestory.github.io/struct.txt',async:false}).responseText
         line1end = struct.search('\n')
         var current = struct.slice(0, line1end)
         struct = struct.slice(line1end + 1)
