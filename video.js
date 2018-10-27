@@ -53,11 +53,10 @@
             for(let choice of data.slice(2)) {
                 $('#choices tr').append('<td><a href="javascript:;" id="' + choice + '"><div class="choice">' + choice + '</div></a></td>')
             }
+            $('#choices tr td a').click(function() {
+                changeVideo($(this).attr('id'))
+                init()
+            })
         }
         changeVideo(current)
-
-        $('#choices tr td a').click(function() {
-            changeVideo($(this).attr('id'))
-            init()
-        })
     })
