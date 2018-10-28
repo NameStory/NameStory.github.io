@@ -9,7 +9,8 @@ a {
 }
 
 #page {
-    position: fixed;
+    font-family:Arial,Helvetica,sans-serif;
+    position: absolute;
     width: var(--pagewidth);
     left: 50%;
     margin-left: calc(-0.5 * var(--pagewidth));
@@ -28,22 +29,22 @@ a {
     overflow: hidden;
 }
 
-#playpause {
-    --radius: 4rem;
-    position: fixed;
-    top: calc(0.5 * var(--videoratio) * var(--pagewidth));
+#play {
+    --radius: 30px;
+    position: absolute;
     left: 50%;
     width: calc(2 * var(--radius));
     height: calc(2 * var(--radius));
     margin-top: calc(-1 * var(--radius));
     margin-left: calc(-1 * var(--radius));
     border-radius: var(--radius);
-    padding-left: calc(0.3 * var(--radius));
-    font-size: calc(0.8 * var(--radius));
-    background: none;
-    color: #AAA;
+    font-size: calc(0.8333 * var(--radius));
+    line-height: calc(2.2 * var(--radius));
+    background: rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+    text-align: center;
+    color: white;
     border: none;
-    opacity: 0.8;
 }
 
 #prog {
@@ -54,11 +55,10 @@ a {
 }
 
 #choices {
-    position: fixed;
+    position: absolute;
     table-layout: fixed;
     width: calc(0.8 * var(--pagewidth));
     margin: 0 calc(0.1 * var(--pagewidth));
-    top: calc(0.5 * var(--pagewidth));
 }
 
 .choice {
@@ -72,8 +72,7 @@ a {
 .title {
     --height: 4rem;
     line-height: var(--height);
-    position: fixed;
-    top: calc(0.5 * var(--videoratio) * var(--pagewidth));
+    position: absolute;
     left: 50%;
     width: var(--pagewidth);
     margin-top: calc(-1 * var(--height));
